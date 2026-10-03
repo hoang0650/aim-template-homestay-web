@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mây Homestay · Đà Lạt</title>
+  <meta name="description" content="Homestay view đồi thông ở Đà Lạt — đặt phòng trực tiếp, giá tốt nhất." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#top">☁ Mây Homestay</a>
+    <nav class="links">
+      <a href="#rooms">Phòng</a>
+      <a href="#amenities">Tiện ích</a>
+      <a href="#reviews">Đánh giá</a>
+      <a href="#booking" class="btn btn-sm">Đặt phòng</a>
+    </nav>
+    <button class="menu" aria-label="Mở menu" aria-expanded="false">☰</button>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <p class="eyebrow">Đà Lạt · 1.500 m</p>
+      <h1>Thức dậy giữa<br />đồi thông và mây</h1>
+      <p class="lead">6 phòng gỗ ấm cúng, ban công nhìn thung lũng, bữa sáng từ nông trại địa phương. Cách chợ Đà Lạt 10 phút.</p>
+      <div class="hero-cta">
+        <a href="#booking" class="btn">Đặt phòng ngay</a>
+        <a href="#rooms" class="btn btn-ghost">Xem phòng</a>
+      </div>
+      <ul class="stats">
+        <li><strong>4.9★</strong><span>320+ đánh giá</span></li>
+        <li><strong>6</strong><span>phòng riêng</span></li>
+        <li><strong>24/7</strong><span>hỗ trợ</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="rooms">
+    <div class="section-head">
+      <h2>Chọn phòng</h2>
+      <div class="filters" role="tablist">
+        <button class="chip active" data-filter="all">Tất cả</button>
+        <button class="chip" data-filter="2">2 khách</button>
+        <button class="chip" data-filter="4">4 khách</button>
+      </div>
+    </div>
+    <div class="rooms" id="room-list"></div>
+  </section>
+
+  <section class="section alt" id="amenities">
+    <h2>Tiện ích</h2>
+    <div class="amenities">
+      <div class="amenity"><span>🔥</span><h3>Lò sưởi</h3><p>Phòng gỗ có lò sưởi cho những đêm 12°C.</p></div>
+      <div class="amenity"><span>🍳</span><h3>Bữa sáng</h3><p>Bánh mì nướng, trứng gà ta, cà phê Cầu Đất.</p></div>
+      <div class="amenity"><span>🛵</span><h3>Thuê xe máy</h3><p>Giao xe tận nơi, 120.000 ₫/ngày.</p></div>
+      <div class="amenity"><span>📶</span><h3>Wi-Fi 200Mbps</h3><p>Làm việc từ xa thoải mái, có góc bàn riêng.</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="reviews">
+    <h2>Khách nói gì</h2>
+    <div class="reviews">
+      <blockquote><p>“View sáng sớm đẹp không tả nổi, chủ nhà rất dễ thương.”</p><cite>— Linh, Hà Nội</cite></blockquote>
+      <blockquote><p>“Phòng sạch, ấm, bữa sáng ngon. Sẽ quay lại mùa hoa mai anh đào.”</p><cite>— Minh, TP.HCM</cite></blockquote>
+      <blockquote><p>“Yên tĩnh, đúng chất Đà Lạt. Wi-Fi mạnh nên vừa đi chơi vừa làm việc.”</p><cite>— Anna, Berlin</cite></blockquote>
+    </div>
+  </section>
+
+  <section class="section alt" id="booking">
+    <h2>Đặt phòng</h2>
+    <form class="booking" id="booking-form" novalidate>
+      <label>Họ tên<input name="name" required placeholder="Nguyễn Văn A" /></label>
+      <label>Số điện thoại<input name="phone" required inputmode="tel" placeholder="09xx xxx xxx" /></label>
+      <label>Nhận phòng<input name="checkin" type="date" required /></label>
+      <label>Trả phòng<input name="checkout" type="date" required /></label>
+      <label>Phòng<select name="room" id="room-select"></select></label>
+      <label>Số khách<input name="guests" type="number" min="1" max="6" value="2" /></label>
+      <p class="summary" id="summary">Chọn ngày để xem tổng tiền.</p>
+      <button class="btn" type="submit">Gửi yêu cầu đặt phòng</button>
+      <p class="msg" id="form-msg" role="status"></p>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>☁ Mây Homestay · 12 Đường Hoa Hồng, Phường 4, Đà Lạt · 0909 000 000</p>
+    <p class="muted">Template mẫu cho AI Markets Builder.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
